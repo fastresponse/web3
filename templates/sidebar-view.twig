@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block sidebar %}
+<div class="rightsidebar2">
+  <div class="quicklinks2">
+    {% for btn in buttons %}
+      {% include "button.twig" %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock sidebar %}
+
+{% block maincontent %}
+<div class="leftcontent2">
+  {{ content|raw }}
+</div> 
+{% endblock maincontent %}

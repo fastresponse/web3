@@ -1,0 +1,23 @@
+<div id="address">
+  <a href="http://www.google.com/maps/place/2075+Allston+Way+Berkeley+CA+94704/">
+    2075 Allston Way, <span class="nowrap">Suite B</span><br />
+    Berkeley, CA 94704
+  </a>
+</div>
+
+<div id="phone">
+  <a href="tel:+1-510-849-4009">510-849-4009</a>
+</div>
+
+<div id="email">
+  <script>
+    poorly_obfuscated = 'iJn%fQ**0Oo#@-Pf=aBs!7!tLrPPFe3s(p)*oJnRs&e.:0oQQrKg8';
+    real = poorly_obfuscated.replace(/[^a-z@.]/g, '');
+    document.write('<a href="mailto:' + real + '">' + real + '</a>');
+  </script>
+  <noscript>
+    <a href="/contact/">Email</a>
+  </noscript>
+</div>
+
+<div id="copyright">&copy;{{ "now"|date('Y') }}</div>
