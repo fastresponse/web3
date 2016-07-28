@@ -413,7 +413,8 @@ nav a:hover {
 }
 
 img#logo-img {
-  max-width: 80%;
+  width: 80%;
+  /* max-height: 120px; */
 }
 
 
@@ -502,11 +503,14 @@ body>footer a {
   border-left: 1px solid #9AB;
   margin-left: 1px;
   position: relative;
+  text-shadow: 0 3px 7px #b7b507;
 }
 #footer-menu .submenu div:first-child {
   font-size: 1.4em;
   margin-left: -10px;
   border-left: none;
+  text-shadow: none;
+  flex: none;
 }
 #footer-menu .submenu div a {
   color: #DDD;
@@ -520,4 +524,6 @@ body>footer a {
 }
 
 
-
+body>header>a {
+    display: inline-block;
+}

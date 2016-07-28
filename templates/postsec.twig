@@ -1,0 +1,22 @@
+{% extends 'course.twig' %}
+
+{% set css = ['postsec.css']|merge( css|default( [] ) ) %}
+
+{% block main %}
+  <main>
+    <div id="left-col">
+    {% for image in left_images %}
+      <img src="{{ image }}" alt="">
+    {% endfor %}
+    </div>
+    <div id="center-col">
+      {{ content|raw }}
+    </div>
+    <div id="right-col">
+    {% for image in right_images %}
+      <img src="{{ image }}" alt="">
+    {% endfor %}
+    </div>
+  </main>
+{% endblock main %}
+

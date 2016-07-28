@@ -1,11 +1,8 @@
-{% extends 'sidebar-view.twig' %}
+{% extends 'base.twig' %}
 
-{% block maincontent %}
-<div class="leftcontent2">
-  {% for announcement in announcements %}
-    {% include 'announcement.twig' %}
-  {% endfor %}
+{% set css = ['courses.css']|merge( css|default( [] ) ) %}
 
-  {{ content|raw }}
-</div>
-{% endblock maincontent %}
+{% block main %}
+  {{ parent() }}
+{% endblock main %}
+
