@@ -1,0 +1,26 @@
+
+body>header {
+  height: 20%;
+}
+
+body>header>a {
+  height: 65%;
+}
+
+#menu {
+  width: 11%;
+  font-size: 0.7em;
+  line-height: 1.4em;
+}
+
+main {
+  background-color: rgba(0,0,0, 0.75);
+  padding: 10px;
+}
+
+
+h1#page-header {
+    margin: 0.5em 0 0.5em 15%;
+    font-family: Quicksand, sans-serif;
+    /* text-align: center; */
+}

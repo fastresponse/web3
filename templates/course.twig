@@ -2,6 +2,11 @@
 
 {% set css = ['courses.css']|merge( css|default( [] ) ) %}
 
+{% block header %}
+  {{ parent() }}
+  <h1 id="page-header">{{ page_header }}</h1> 
+{% endblock header %}
+
 {% block main %}
   {{ parent() }}
 {% endblock main %}

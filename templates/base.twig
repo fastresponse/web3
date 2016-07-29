@@ -34,13 +34,13 @@
   {% endblock header %}
 </header>
 
-<aside id="menu">
-  <nav>
-    {% include 'menu.twig' %}
-  </nav>
-</aside>
-
 <section id="main">
+  <aside id="menu">
+    <nav>
+      {% include 'menu.twig' %}
+    </nav>
+  </aside>
+
   {% block main %}
   <main>
     {{ content|raw }}
