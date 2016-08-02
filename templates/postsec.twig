@@ -6,7 +6,7 @@
   <main>
     <div id="left-col">
     {% for image in left_images %}
-      <img src="{{ image }}" alt="">
+      <div class="img-wrap"><img src="{{ image }}" alt=""></div>
     {% endfor %}
     </div>
     <div id="center-col">
@@ -14,7 +14,7 @@
     </div>
     <div id="right-col">
     {% for image in right_images %}
-      <img src="{{ image }}" alt="">
+      <div class="img-wrap"><img src="{{ image }}" alt=""></div>
     {% endfor %}
     </div>
   </main>
