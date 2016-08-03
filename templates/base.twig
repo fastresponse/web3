@@ -31,6 +31,9 @@
 <header>
   {% block header %}
   {% include 'header.twig' %}
+{% if page_header is defined %}
+  <h1 id="page-header">{{ page_header }}</h1>
+{% endif %}
   {% endblock header %}
 </header>
 

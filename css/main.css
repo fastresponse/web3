@@ -612,7 +612,10 @@ body>footer a {
   /* display: inline-block; */
   /* flex-grow: 1; */
   border: none;
-  line-height: 1.2em;
+  line-height: 1.4em;
+  width: 11%;
+  font-size: 0.7em;
+  height: 100%;
 }
 
 #footer-menu {
@@ -699,4 +702,19 @@ body>header>a {
 #footer-information, #footer-socialmedia {
     font-size: 0.8em;
     margin-right: 15px;
+}
+
+main {
+    overflow: scroll;
+    padding: 10px;
+    background-color: rgba(0,0,0, 0.75);
+}
+
+main > *:first-child {
+    margin-top: 0;
+}
+
+#page-header {
+    margin: 0.5em 0 0.5em 15%;
+    font-family: Quicksand, sans-serif;
 }
