@@ -1,0 +1,18 @@
+ul.testimonials {
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: space-between; */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+ul.testimonials > li {height: 33%;padding: 2% 0;}
+
+ul.testimonials > li > div:first-child {
+  font-weight: bold;
+}
+
+ul.testimonials > li > div:nth-child(2) {
+  margin-left: 25px;
+}
