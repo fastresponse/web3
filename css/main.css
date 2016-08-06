@@ -76,51 +76,51 @@ textarea {
  * MA: #5dafe1
  * SPT: #e8d318
  * Admin: #2e2367
- * Postsec: #099e13
- * CEU: #9e5513
- * About: #2e2367
- * News: #105015
- * Contact: #503090
- * Resources: #453010
+ * Postsec: #62ff00
+ * CEU: #4c20bf
+ * About: #00d0ff
+ * News: #ffb701
+ * Contact: #fe6a00
+ * Resources: #fb00ff
  */
 
 .about.color {
-  color: #2e2367 !important;
+  color: #00d0ff !important;
 }
 .about.border-color {
-  border-color: #2e2367 !important;
+  border-color: #00d0ff !important;
 }
 .news.color {
-  color: #105015 !important;
+  color: #ffb701 !important;
 }
 .news.border-color {
-  border-color: #105015 !important;
+  border-color: #ffb701 !important;
 }
 .contact.color {
-  color: #503090 !important;
+  color: #fe6a00 !important;
 }
 .contact.border-color {
-  border-color: #503090 !important;
+  border-color: #fe6a00 !important;
 }
 .resources.color {
-  color: #453010 !important;
+  color: #fb00ff !important;
 }
 .resources.border-color {
-  border-color: #453010 !important;
+  border-color: #fb00ff !important;
 }
 
 .postsec.color {
-  color: #099e13 !important;
+  color: #62ff00 !important;
 }
 .postsec.border-color {
-  border-color: #099e13 !important;
+  border-color: #62ff00 !important;
 }
 
 .ceu.color {
-  color: #9e5513 !important;
+  color: #4c20bf !important;
 }
 .ceu.border-color {
-  border-color: #9e5513 !important;
+  border-color: #4c20bf !important;
 }
 
 .admin.color {
