@@ -1,0 +1,18 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+  <div id="left-col">
+  {% for image in left_images %}
+    <figure class="img-wrap">
+      <img src="{{ image }}" alt="">
+      {% if left_captions is defined and left_captions[loop.index0] is defined and left_captions[loop.index0] is not null %}
+        <figcaption>{{ left_captions[loop.index0] }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endfor %}
+  </div>
+  <div id="center-col">
+    {{ content|raw }}
+  </div>
+{% endblock main %}
+

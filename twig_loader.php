@@ -30,6 +30,7 @@ class TemplateRenderer {
     );
     $this->loader = new Twig_Loader_Filesystem($templateDirs);
     $this->environment = new Twig_Environment($this->loader, $envOptions);
+    $this->environment->addExtension(new Twig_Extension_Debug());
     $this->environment->addTest($test_ondisk);
   }
 

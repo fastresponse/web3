@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+{% set css = ['images_3cols.css']|merge( css|default( [] ) ) %}
+
+{% block main %}
+  {% for content_block in content_blocks %}
+    <div>
+      <figure class="img-wrap">
+        <img src="{{ content_block['image'] }}" alt="">
+        {% if content_block['caption'] is defined and content_block['caption'] is not null %}
+          <figcaption>{{ content_block['caption'] }}</figcaption>
+        {% endif %}
+      </figure>
+    </div>
+  {% endfor %}
+{% endblock main %}
+

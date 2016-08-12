@@ -1,0 +1,25 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+  <main>
+  <div class="contact-form">
+    <div id="left-col">
+      {{ left|raw }}
+    </div>
+    <div id="center-col">
+      {{ center|raw }}
+    </div>
+    <div id="right-col">
+    {% for image in right_images %}
+      <figure class="img-wrap">
+        <img src="{{ image }}" alt="">
+        {% if right_captions is defined and right_captions[loop.index0] is defined and right_captions[loop.index0] is not null %}
+          <figcaption>{{ right_captions[loop.index0] }}</figcaption>
+        {% endif %}
+      </figure>
+    {% endfor %}
+    </div>
+  </div>
+  </main>
+{% endblock main %}
+
