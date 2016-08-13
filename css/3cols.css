@@ -1,0 +1,60 @@
+main {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+#left-col, #center-col, #right-col {
+    flex: 0 0 32% !important;
+    width: 32% !important;
+    justify-content: flex-start;
+}
+
+#center-col {
+  padding: 0 !important;
+}
+
+/*
+#right-col {
+    flex: 0 0 40%;
+    width: 40%;
+    justify-content: flex-start;
+}
+
+#right-col > dl {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#right-col > dl > dt {
+  display: inline-block;
+  flex: 1 20%;
+  margin-top: 10px !important;
+}
+
+#right-col > dl > dd {
+  display: inline-block;
+  flex: 1 70%;
+  margin-top: 10px !important;
+}
+*/
+
+dl {
+  margin: 0;
+}
+dt {
+  margin-top: 5px;
+}
+dt:first-child {
+  margin-top: 0;
+}
+dd {
+  margin: 0 0 0 20px;
+}

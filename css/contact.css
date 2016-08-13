@@ -31,3 +31,29 @@
 #submenu_contact_us {
     display: flex;
 }
+
+main > a.map {
+  display: block;
+  align-self: center;
+}
+
+main > ul.transit {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+main > ul.parking {
+  overflow-y: scroll;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+main > ul.parking li {
+  margin-top: 10px;
+}
+main > ul.parking > li:first-child {
+  margin-top: 0;
+}
