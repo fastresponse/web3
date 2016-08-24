@@ -1,0 +1,16 @@
+{% extends 'entry_list.twig' %}
+
+{% set active = 'postsec' %}
+
+{% block entry_list %}
+  {% for testimonial in testimonials %}
+    <figure class="img-wrap">
+      <img src="{{ testimonial['image'] }}" alt="">
+      <figcaption>
+        <div class="name">{{ testimonial['name'] }}</div>
+        <div class="title">{{ testimonial['title'] }}</div>
+        <div class="quote">{{ testimonial['quote'] }}</div>
+      </figcaption>
+    </figure>
+  {% endfor %}
+{% endblock entry_list %}

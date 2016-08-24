@@ -70,6 +70,7 @@ print $renderer->render('contact.twig', array(
   'keywords' => 'fast response, fast, response, health care, healthcare, school, education, training, certification, emt, emergency medical technician, medical assistant, sterile processing, phlebotomy, phlebotomist, pharmacy tech, pharmacy technician, paramedic, continuing education, cpr, bls, basic life support, acls, advanced life support, ecg, ekg',
   'canonical' => 'http://www.fastresponse.org/',
   'css' => array('contact.css'),
+  'active' => 'contact',
   'left' => $left_col,
   'center' => $center_col,
   'right_images' => array('/img/interview.jpg', '/img/front.jpg', '/img/ASHP-Accredited-Logo.jpg'),

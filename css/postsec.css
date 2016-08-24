@@ -15,7 +15,16 @@ h2 {
 #testimonial-link {
     text-align: center;
     font-weight: bold;
-    text-decoration: underline;
-    margin-top: 0;
+    margin-bottom: 1.5em !important;
+}
+#testimonial-link > a {
+    padding-bottom: 2px;
+    border-bottom: solid 1px white;
 }
 
+
+
+#center-col > * {
+    margin-top: 0;
+    margin-bottom: 1em;
+}

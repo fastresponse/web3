@@ -36,4 +36,7 @@ figcaption {
     overflow: hidden;
     font-weight: normal;
     background-color: transparent;
+    font-size: 0.9em;
+    line-height: 1.15em;
+    font-family: serif;
 }

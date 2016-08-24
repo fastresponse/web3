@@ -10,6 +10,7 @@ print $renderer->render('images_3cols.twig', array(
   'keywords' => 'fast response, fast, response, health care, healthcare, school, education, training, certification, emt, emergency medical technician, medical assistant, sterile processing, phlebotomy, phlebotomist, pharmacy tech, pharmacy technician, paramedic, continuing education, cpr, bls, basic life support, acls, advanced life support, ecg, ekg',
   'canonical' => 'http://www.fastresponse.org/',
   'css' => array('about.css'),
+  'active' => 'about',
   'content_blocks' => array(
     array(
       'image' => '/img/testimonials/anjani_a.jpg',

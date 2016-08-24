@@ -32,11 +32,6 @@
     display: flex;
 }
 
-main > a.map {
-  display: block;
-  align-self: center;
-}
-
 main > ul.transit {
   display: flex;
   flex-flow: column nowrap;
@@ -56,4 +51,38 @@ main > ul.parking li {
 }
 main > ul.parking > li:first-child {
   margin-top: 0;
+}
+
+
+main {
+    align-items: stretch;
+}
+
+#map_col, #directions_col {
+    display: flex;
+    flex-flow: column;
+}
+#map_col {
+    justify-content: center;
+}
+#directions_col {
+    justify-content: space-around;
+}
+
+a.map {
+    display: inline-block;
+}
+
+#directions_col form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+input[type="submit"] {
+    font-weight: bold;
+    margin-top: 1em;
+    min-width: 15em;
+}
+input[readonly="readonly"] {
+    color: buttontext;
 }

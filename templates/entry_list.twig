@@ -1,0 +1,22 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+  <div id="center-col">
+  {% block entry_list %}
+    {% for entry in entries %}
+      <div class="entry">{{ entry }}</div>
+    {% endfor %}
+  {% endblock entry_list %}
+  </div>
+  <div id="right-col">
+  {% for image in right_images %}
+    <figure class="img-wrap">
+      <img src="{{ image }}" alt="">
+      {% if right_captions is defined and right_captions[loop.index0] is defined and right_captions[loop.index0] is not null %}
+        <figcaption>{{ right_captions[loop.index0] }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endfor %}
+  </div>
+{% endblock main %}
+

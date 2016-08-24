@@ -263,6 +263,7 @@ body.loaded {
 nav ul {
   margin: 0;
   padding: 0;
+  height: 100%;
   list-style-type: none;
   font-family: "Quicksand", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-variant: small-caps;
@@ -275,13 +276,22 @@ nav ul li {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  /* margin-left: 1px; */
   position: relative;
+  height: 8%;
   margin-bottom: 12px;
+  opacity: 0.35;
+}
+nav ul li.active,
+nav ul li:hover {
+  opacity: 1.0;
 }
 
 nav ul li a {
   color: #DDD;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 nav a {
@@ -300,9 +310,11 @@ nav a:visited {
   /* color: lightgrey; */
 }
 
+/*
 nav a:hover {
   text-decoration: underline;
 }
+*/
 
 /* ==============
   MOBILE: Main
@@ -595,6 +607,9 @@ a {
     color: #BBBBBB;
     text-decoration: none;
 }
+a:hover {
+    text-decoration: none;
+}
 
 
 body>header {
@@ -853,4 +868,6 @@ figcaption {
 }
 
 
-
+nav {
+    height: 100%;
+}

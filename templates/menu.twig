@@ -1,5 +1,5 @@
 <ul>
-  <li><div class="color_bar postsec border-color"></div><a href="#" data-submenu="submenu_career_courses">Career<br>Courses</a>
+  <li{{ active == 'postsec' ? ' class="active"' }}><div class="color_bar postsec border-color"></div><a href="#" data-submenu="submenu_career_courses">Career<br>Courses</a>
     <ul class="submenu">
       <li><a href="/courses/emt/">EMT</a></li>
       <li><a href="/courses/paramedic/">Paramedic Academy</a></li>
@@ -9,7 +9,7 @@
       <li><a href="/courses/spt/">Sterile Processing</a></li>
     </ul>
   </li>
-  <li><div class="color_bar ceu border-color"></div><a href="#" data-submenu="submenu_cpr_ceu">CPR / CEU</a>
+  <li{{ active == 'ceu' ? ' class="active"' }}><div class="color_bar ceu border-color"></div><a href="#" data-submenu="submenu_cpr_ceu">CPR / CEU</a>
     <ul class="submenu">
       <li><a href="/courses/bls/">CPR</a></li>
       <li><a href="/courses/acls/">ACLS</a></li>
@@ -23,8 +23,8 @@
       <li><a href="/courses/first-aid/">First Aid</a></li>
     </ul>
   </li>
-  <li><div class="color_bar about border-color"></div><a href="/about/">About Us</a></li>
-  <li><div class="color_bar news border-color"></div><a href="/news/">News</a></li>
-  <li><div class="color_bar contact border-color"></div><a href="/contact/{{ form_course_name ? '?p=' ~ form_course_name }}">Contact Us</a></li>
-  <li><div class="color_bar resources border-color"></div><a href="/students/">Student<br>Resources</a></li>
+  <li{{ active == 'about' ? ' class="active"' }}><div class="color_bar about border-color"></div><a href="/about/">About Us</a></li>
+  <li{{ active == 'news' ? ' class="active"' }}><div class="color_bar news border-color"></div><a href="/news/">News</a></li>
+  <li{{ active == 'contact' ? ' class="active"' }}><div class="color_bar contact border-color"></div><a href="/contact/{{ form_course_name ? '?p=' ~ form_course_name }}">Contact Us</a></li>
+  <li{{ active == 'students' ? ' class="active"' }}><div class="color_bar resources border-color"></div><a href="/students/">Student<br>Resources</a></li>
 </ul>

@@ -1,3 +1,6 @@
+#submenu_career_courses {
+  display: flex;
+}
 ul.testimonials {
   display: flex;
   flex-flow: column nowrap;
