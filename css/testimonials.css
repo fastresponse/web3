@@ -1,6 +1,57 @@
 #submenu_career_courses {
   display: flex;
 }
+
+#center-col {
+  display: block;
+}
+
+#center-col figure {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 1.3%;
+  height: 32%;
+  width: 100%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
+  background-color: rgba(0,0,0, 0.75);
+}
+#center-col figure:first-child {
+  margin-top: 0;
+}
+#center-col figure > img {
+  max-height: 100%;
+  max-width: 48%;
+  margin-right: 4px;
+}
+#center-col figure > figcaption {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  top: 0;
+  height: 100%;
+  font-size: 0.9em;
+  font-weight: normal;
+  line-height: 1.3em;
+  background: none;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.title {
+  text-indent: 1em;
+  font-style: italic;
+}
+.quote {
+  margin-top: 5px;
+}
+
 ul.testimonials {
   display: flex;
   flex-flow: column nowrap;
@@ -10,7 +61,10 @@ ul.testimonials {
   height: 100%;
 }
 
-ul.testimonials > li {height: 33%;padding: 2% 0;}
+ul.testimonials > li {
+  height: 33%;
+  padding: 2% 0;
+}
 
 ul.testimonials > li > div:first-child {
   font-weight: bold;

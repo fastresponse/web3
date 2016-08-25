@@ -23,6 +23,13 @@ $testimonials = array(
     'quote' => 'Fusce ac lectus luctus lorem tincidunt tristique. Duis interdum fermentum vehicula. Phasellus dui tortor, tristique rutrum consectetur vel, molestie ut quam. Suspendisse non enim sit amet lorem eleifend facilisis.',
     'image' => '/img/testimonials/jeffrey_s.jpg',
   ),
+  array(
+    'name' => 'Another Sample',
+    'title' => 'Student',
+    'date' => '2016-10-17',
+    'quote' => 'The quick brown fox jumped over the lazy dogs.',
+    'image' => '/img/testimonials/evan_k.jpg',
+  ),
 );
 
 $right_images = array(

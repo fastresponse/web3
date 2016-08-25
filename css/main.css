@@ -252,9 +252,11 @@ body.loaded {
   background: #f16529;
 }
 
+/*
 .title {
   color: white;
 }
+*/
 
 /* ==============
   MOBILE: Menu
@@ -418,9 +420,11 @@ nav a:hover {
   WIDE: Menu
   ============ */
 
+/*
   .title {
       float: left;
   }
+  */
 
   nav {
       /* float: right; */
