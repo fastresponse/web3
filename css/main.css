@@ -285,7 +285,7 @@ nav ul li {
 }
 nav ul li.active,
 nav ul li:hover {
-  opacity: 1.0;
+  opacity: 1.0 !important;
 }
 
 nav ul li a {
@@ -702,11 +702,10 @@ body>footer a {
 }
 #footer-menu .submenu div:first-child {
 }
-#footer-menu .submenu div a,
-#footer-menu .submenu div span {
+#footer-menu .submenu div a {
   color: #DDD;
   /* padding-left: 5px; */
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
 nav ul li div.color_bar {
@@ -722,7 +721,7 @@ nav ul li div.color_bar,
   left: -2px;
   position: relative;
   flex: none;
-  z-index: 5;
+  /* z-index: 5; */
 }
 #footer-menu .submenu div:nth-child(3n+0) div.color_bar {
   /* left: -1px; */
@@ -869,6 +868,7 @@ figcaption {
 
 .nowrap {
     white-space: nowrap;
+    padding: 0;
 }
 
 
@@ -878,12 +878,7 @@ nav {
 
 
 .animated-menu-item {
-    position: fixed;
-    opacity: 1.0;
-    /*
-    margin: 0;
-    padding: 0;
-    font-family: "Quicksand", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: #DDD;
-  */
+    position: fixed !important;
+    opacity: 1.0 !important;
+    z-index: 50;
 }

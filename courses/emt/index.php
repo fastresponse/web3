@@ -30,14 +30,14 @@ $content = <<<'HTML'
 HTML;
 
 $left_images = array(
-  '/img/emt/slide02.jpg',
-  '/img/emt/EMT Skills 03-2013 (136).png',
-  '/img/emt/slide03.jpg',
+  '/img/emt/classroom.jpg',
+  '/img/emt/bvm_backboard.jpg',
+  '/img/emt/sitting_spinal_immobile.jpg',
 );
 $right_images = array(
-  '/img/emt/emt skills lab 005.jpg',
-  '/img/emt/slide04.jpg',
-  '/img/emt/slide05.jpg',
+  '/img/emt/arm_bandage.jpg',
+  '/img/emt/intubation_demo.jpg',
+  '/img/emt/car_accident.jpg',
 );
 
 

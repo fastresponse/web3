@@ -31,48 +31,56 @@ $(document).ready(function() {
     $(this).attr('src', $(this).attr('data-src'));
   });
 
-  $('[data-submenu]').on('click', function(event){
+  $('[data-submenu]').on('click', function(event) {
     event.preventDefault();
-    console.log( $(this) );
+
     var $el = $(this);
-    var $clone = $(this).clone();
+    var $parent = $el.parent();
+
+    if ($parent.hasClass('active')) {
+      return;
+    }
+
+    var $bar = $el.prev('.color_bar');
+    var $footer = $('body > footer');
+    var $footermenu = $('#footer-menu');
+    var $submenu = $( ('#' + $el.attr('data-submenu')) );
+    var $dest = $submenu.find('.color_bar').first();
+    var $footerhide = $footer.children().add( $footermenu.children() );
+
+    $parent.siblings().removeClass('active').fadeTo(800, 0.35);
+    $parent.addClass('active');
+
+    $('.animated-menu-item').stop(true).remove();
+
+    var $clone = $bar.clone();
     $clone
       .removeAttr('data-submenu')
       .addClass('animated-menu-item')
-      .width($(this).width())
-      .height($(this).height())
-      .offset($(this).offset())
-      .html($(this).html())
-      .appendTo($(this).parent())
+      .width($bar.width())
+      .height($bar.height())
+      .offset($bar.offset())
+      .html($bar.html())
+      .appendTo($parent)
     ;
 
-    /*
-    $('#menu').animate({
-      fontSize: "1em",
-      lineHeight: "1.2em",
-      width: "18%"
-    }, {
-      duration: 500,
-      complete: function() {
-      }
+    $footer.stop(true).animate( { opacity: 0 }, 800, function() {
+      $footer.css('border-width', 0).css('padding-left', 0);
+      $footerhide.hide();
+      $footermenu.show();
+      $submenu.css('opacity', 0).css('display', 'flex');
+      $footer.css('opacity', 1);
+      $submenu.stop(true).animate( { opacity: 1 }, 800, function() {
+        $clone.animate( {
+          height: $dest.height(),
+          width: $dest.width(),
+          top: $dest.offset()['top'],
+          left: $dest.offset()['left']
+        }, 1500, function() {
+          $clone.remove();
+        });
+      });
     });
-    */
-
-    $('#footer-information, #footer-socialmedia, #footer-menu, #footer-menu > *')
-      .slideUp({
-        duration: 500,
-        complete: function() {
-          $('#footer-menu').hide().delay(100);
-          $( ('#' + $el.attr('data-submenu')) ).css('display', 'flex');
-          $('#footer-menu').slideDown(500);
-        }
-      }
-    );
-
-    $clone.animate({
-    }, {
-    });
-
 
   });
 
