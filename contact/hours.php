@@ -54,8 +54,6 @@ $right = <<<'HTML'
     <dd><a href="mailto: pharmacy@fastresponse.org">pharmacy@fastresponse.org</a></dd>
 	<dt>Medical Assisting</dt>
     <dd><a href="mailto: ma@fastresponse.org">ma@fastresponse.org</a></dd>
-	<dt>Sterile Processing</dt>
-    <dd><a href="mailto: spt@fastresponse.org">spt@fastresponse.org</a></dd>
 	<dt>Continuing Education</dt>
     <dd><a href="mailto: ceu@fastresponse.org">ceu@fastresponse.org</a></dd>
 </dl>
@@ -67,7 +65,7 @@ print $renderer->render('3cols.twig', array(
   'title' => 'Fast Response School of Health Care Education', 
   'page_header' => 'Hours & Information',
   'description' => "Fast Response offers the Bay Area's most comprehensive education and resources for healthcare professionals including entry-level courses, certifications, and continuing education units.",
-  'keywords' => 'fast response, fast, response, health care, healthcare, school, education, training, certification, emt, emergency medical technician, medical assistant, sterile processing, phlebotomy, phlebotomist, pharmacy tech, pharmacy technician, paramedic, continuing education, cpr, bls, basic life support, acls, advanced life support, ecg, ekg',
+  'keywords' => 'fast response, fast, response, health care, healthcare, school, education, training, certification, emt, emergency medical technician, medical assistant, phlebotomy, phlebotomist, pharmacy tech, pharmacy technician, paramedic, continuing education, cpr, bls, basic life support, acls, advanced life support, ecg, ekg',
   'canonical' => 'http://www.fastresponse.org/',
   'css' => array('contact.css'),
   'active' => 'contact',

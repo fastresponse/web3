@@ -1,0 +1,19 @@
+#submenu_student_resources {
+  display: flex;
+}
+
+main {
+  display: block;
+  overflow-y: auto;
+}
+
+main a {
+  text-decoration: underline;
+}
+
+dt, li {
+  margin-top: 5px;
+}
+dt:first-child, li:first-child {
+  margin-top: 0;
+}

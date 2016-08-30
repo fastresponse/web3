@@ -1,0 +1,15 @@
+#footer-menu {
+  display: none;
+}
+#footer-information {
+  display: flex;
+}
+#footer-socialmedia {
+  display: block;
+}
+
+body>footer {
+    border-left: 1px solid;
+    padding-left: 10px;
+}
+
