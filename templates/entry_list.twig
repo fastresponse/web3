@@ -1,10 +1,10 @@
 {% extends 'base.twig' %}
 
 {% block main %}
-  <div id="center-col">
+  <div id="center-col" class="entry-list">
   {% block entry_list %}
     {% for entry in entries %}
-      <div class="entry">{{ entry }}</div>
+      <div class="entry">{{ entry|raw }}</div>
     {% endfor %}
   {% endblock entry_list %}
   </div>

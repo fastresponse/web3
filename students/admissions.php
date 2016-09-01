@@ -4,6 +4,7 @@ require_once '../twig_loader.php';
 $renderer = new TemplateRenderer();
 
 $content = <<<'HTML'
+<section>
 <h2>School Course Information </h2>
 <ul>
   <li><a href="/pdf/Fast Response Catalog 2016.pdf">School Catalog 2016</a></li>
@@ -12,9 +13,11 @@ $content = <<<'HTML'
   <li><a href="/pdf/course_packets/Pharmacy Technician - Course Info Packet.pdf">Pharmacy Technician Course Info Packet</a></li>
   <li><a href="/pdf/course_packets/Medical Assistant - Course Info Packet.pdf">Medical Assistant Course Info Packet</a></li>
 </ul>
+</section>
 
 <hr>
 
+<section>
 <h2>Forms</h2>
 <dl>
   <dt><a href="/pdf/admissions/Immunization Form - All Classes.pdf" target="_blank">Immunization Form - General</a></dt>
@@ -41,9 +44,10 @@ $content = <<<'HTML'
   <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
   <dd>To be filled out and turned in to the school registrar once externship is completed. This form can be used for EMT, Phlebotomy, Medical Assistant, and Sterile Processing courses.</dd>
 </dl>
+</section>
 HTML;
 
-print $renderer->render('base.twig', array(
+print $renderer->render('images_right.twig', array(
   'title' => 'Fast Response Admissions Resources', 
   'page_header' => 'Admissions Resources',
   'description' => "Fast Response offers the Bay Area's most comprehensive education and resources for healthcare professionals including entry-level courses, certifications, and continuing education units.",
@@ -52,5 +56,6 @@ print $renderer->render('base.twig', array(
   'css' => array('students.css'),
   'active' => 'students',
   'content' => $content,
+  'right_images' => array('/img/tmp.png', '/img/tmp.png', '/img/tmp.png'),
 ));
 ?>

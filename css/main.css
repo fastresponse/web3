@@ -781,7 +781,8 @@ main {
     line-height: 21px;
 }
 
-main > *:first-child {
+main > *:first-child,
+h2:first-child {
     margin-top: 0;
 }
 
@@ -881,4 +882,9 @@ nav {
     position: fixed !important;
     opacity: 1.0 !important;
     z-index: 50;
+}
+
+
+dd {
+    margin-left: 20px;
 }

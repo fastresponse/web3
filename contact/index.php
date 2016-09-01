@@ -73,7 +73,7 @@ print $renderer->render('contact.twig', array(
   'active' => 'contact',
   'left' => $left_col,
   'center' => $center_col,
-  'right_images' => array('/img/interview.jpg', '/img/front.jpg', '/img/ASHP-Accredited-Logo.jpg'),
+  'right_images' => array('/img/tmp.png','/img/tmp.png',  '/img/tmp.png'),
   'right_captions' => array('Fast Response', null, null),
 ));
 ?>

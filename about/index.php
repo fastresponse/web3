@@ -27,7 +27,7 @@ print $renderer->render('images_right.twig', array(
   'css' => array('about.css'),
   'active' => 'about',
   'content' => $content,
-  'right_images' => array('/img/interview.jpg', '/img/front.jpg', '/img/ASHP-Accredited-Logo.jpg'),
+  'right_images' => array('/img/tmp.png', '/img/tmp.png', '/img/tmp.png'),
   'right_captions' => array('Fast Response', null, null),
 ));
 ?>

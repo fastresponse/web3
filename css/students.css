@@ -3,7 +3,7 @@
 }
 
 main {
-  display: block;
+  /* display: block; */
   overflow-y: auto;
 }
 
@@ -12,8 +12,13 @@ main a {
 }
 
 dt, li {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 dt:first-child, li:first-child {
   margin-top: 0;
+}
+
+
+main > section {
+    flex: 1;
 }
