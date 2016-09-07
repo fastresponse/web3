@@ -1,61 +1,129 @@
 <?php
 require_once '../twig_loader.php';
 
-$left_col = <<<'HTML'
+$programs = array(
+  'EMT',
+  'Phlebotomy',
+  'Pharmacy Technician',
+  'Medical Assistant',
+  'Paramedic',
+  'Other',
+);
+
+$sources = array(
+  'Google',
+  'Facebook',
+  'Yahoo / Bing',
+  'Yelp',
+  'East Bay Express',
+  'Friend / Relative',
+  'Coworker / Employer',
+  'Flyer / Brochure',
+  'Career Fair',
+  'Other',
+);
+
+$source_hosts = array(
+  'www.google.com' => 'Google',
+  'www.facebook.com' => 'Facebook',
+  'm.facebook.com' => 'Facebook',
+  'www.bing.com' => 'Yahoo / Bing',
+  'search.yahoo.com' => 'Yahoo / Bing',
+  'www.yelp.com' => 'Yelp',
+  'm.yelp.com' => 'Yelp',
+);
+
+//$select_options_programs = array_to_select_options($programs, $form_course_name);
+$select_options_programs = <<<'HTML'
+<option value="EMT">EMT</option>
+<option value="Phlebotomy">Phlebotomy</option>
+<option value="Pharmacy Technician">Pharmacy Technician</option>
+<option value="Medical Assistant">Medical Assistant</option>
+<option value="Paramedic">Paramedic</option>
+<option value="Other">Other</option>
+HTML;
+
+//$select_options_sources = array_to_option_html($sources, get_referring_source());
+$select_options_sources = <<<'HTML'
+<option value="Google">Google</option>
+<option value="Facebook">Facebook</option>
+<option value="Yahoo / Bing">Yahoo / Bing</option>
+<option value="Yelp">Yelp</option>
+<option value="East Bay Express">East Bay Express</option>
+<option value="Friend / Relative">Friend / Relative</option>
+<option value="Coworker / Employer">Coworker / Employer</option>
+<option value="Flyer / Brochure">Flyer / Brochure</option>
+<option value="Career Fair">Career Fair</option>
+<option value="Other">Other</option>
+HTML;
+
+$left_col = <<<"HTML"
   <div>
-    <div class="label">What do you want to do?</div><br>
-    <div class="drop-down">Get Information // Enroll&dtrif;</div>
+    <label class="label">What do you want to do?</label><br>
+    <select class="drop-down">
+      <option value="Get Information">Get Information</option>
+      <option value="Enroll">Enroll</option>
+    </select>
   </div>
   <div>
-    <div class="label">Program</div><br>
-    <div class="drop-down">EMT // Phleb // Etc&dtrif;</div>
+    <label class="label">Program</label><br>
+    <select class="drop-down">
+      $select_options_programs
+    </select>
   </div>
   <div>
-    <div class="label">Course Dates</div><br>
-    <div class="drop-down">Aug 19 2016 // Etc&dtrif;</div>
+    <label class="label">Course Dates</label><br>
+    <select class="drop-down">
+      <option value="Oct 31st 2016">Oct 31st 2016</option>
+      <option value="Nov 24th 2016">Nov 24th 2016</option>
+      <option value="Dec 25th 2016">Dec 25th 2016</option>
+      <option value="Dec 31st 2016">Dec 31st 2016</option>
+    </select>
   </div>
   <div>
-    <div class="label">Common Questions</div><br>
-    <div class="checkbox">&FilledSmallSquare;</div>
-    <div class="label">How much is tuition?</div><br>
-    <div class="checkbox">&FilledSmallSquare;</div>
-    <div class="label">What payment plans are available?</div><br>
-    <div class="checkbox">&FilledSmallSquare;</div>
-    <div class="label">What are my career prospects?</div><br>
-    <div class="checkbox">&FilledSmallSquare;</div>
-    <div class="label">When does it start?</div>
+    <label class="label">Common Questions</label><br>
+    <input type="checkbox" class="checkbox" value="How much is tuition?">
+    <label class="label">How much is tuition?</label><br>
+    <input type="checkbox" class="checkbox" valie="What payment plans are available?">
+    <label class="label">What payment plans are available?</label><br>
+    <input type="checkbox" class="checkbox" value="What are my career prospects?">
+    <label class="label">What are my career prospects?</label><br>
+    <input type="checkbox" class="checkbox" value="When does it start?">
+    <label class="label">When does it start?</label>
   </div>
   <div>
-    <div class="label">Where did you hear about us?</div><br>
-    <div class="drop-down">Google // Facebook // Etc&dtrif;</div>
+    <label class="label">Where did you hear about us?</label><br>
+    <select class="drop-down">
+      $select_options_sources
+    </select>
   </div>
 HTML;
 
 $center_col = <<<'HTML'
   <div>
-    <div class="label">Name</div><br>
-    <div class="textbox"></div>
+    <label class="label">Name</label><br>
+    <input type="text" class="textbox">
   </div>
   <div>
-    <div class="label">Email</div><br>
-    <div class="textbox"></div>
+    <label class="label">Email</label><br>
+    <input type="text" class="textbox">
   </div>
   <div>
-    <div class="label">Phone</div><br>
-    <div class="textbox"></div><br>
-    <div class="checkbox">&FilledSmallSquare;</div>
-    <div class="label">Contact me via SMS</div>
+    <label class="label">Phone</label><br>
+    <input type="text" class="textbox"><br>
+    <input type="checkbox" class="checkbox">
+    <label class="label">Contact me via SMS</label>
   </div>
   <div>
-    <div class="label">Zip</div><br>
-    <div class="textbox"></div>
+    <label class="label">Zip</label><br>
+    <input type="text" class="textbox">
   </div>
 
   <div>
-    <div class="label">Other Questions and Comments</div><br>
-    <div class="textbox" style="height: 5em;"></div>
+    <label class="label">Other Questions and Comments</label><br>
+    <textarea class="textbox" style="height: 5em;" cols="20" rows="5"></textarea>
   </div>
-  <div class="button">Submit</div>
+  <input type="submit" class="button" value="Submit">
   <div style="font-size: 0.7em;">
     <a href="">Privacy Policy</a> | <a href="">Terms and Conditions</a>
   </div>
