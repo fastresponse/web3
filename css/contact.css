@@ -6,7 +6,7 @@
 
 .contact-form .textbox {display: inline-block;border: 2px solid;height: 1.5em;width: 100%;background: rgba(0,0,0, 0.8);}
 
-.contact-form .checkbox {display: inline;/* height: 1.2em; *//* width: 1.2em; */border: 2px solid;padding: 2px;}
+.contact-form .checkbox {display: inline;/* height: 1.2em; *//* width: 1.2em; */border: 2px solid;padding: 2px;vertical-align: text-bottom;}
 
 .contact-form .button {border: 4px solid;background-color: rgba(20,20,50,0.9);padding: 10px;display: inline-block;width: auto;/* margin: 20px 0; */}
 
@@ -21,11 +21,12 @@
     width: 100%;
 }
 
-#center-col {overflow: hidden;padding-right: 5%;}
+#center-col {overflow: hidden;padding: 0 5%;}
 
 #left-col {
-    flex: 0 0 32%;
-    width: 32%;
+    flex: 0 0 29%;
+    width: 29%;
+    /* padding-right: 3%; */
 }
 
 #submenu_contact_us {
@@ -82,7 +83,59 @@ input[type="submit"] {
     font-weight: bold;
     margin-top: 1em;
     min-width: 15em;
+    color: #BBBBBB;
+}
+input[type="checkbox"] {
 }
 input[readonly="readonly"] {
     color: buttontext;
+}
+select {
+    background-color: transparent;
+    width: 100%;
+}
+option {
+    background-color: black;
+}
+
+.checksquare {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #BBBBBB;
+  border-radius: 3px;
+  padding: 2px;
+  vertical-align: text-bottom;
+  position: relative;
+  text-shadow: none;
+  margin-top: 3px;
+}
+.checksquare input.checkbox {
+  visibility: hidden;
+  display: none;
+}
+.checksquare input + label {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+.checksquare input + label:after {
+  display: inline-block;
+  opacity: 0;
+  content: '';
+  background: #BBBBBB;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  position: relative;
+  top: -5px;
+}
+.checksquare input + label:hover:after {
+  opacity: 0.3;
+}
+.checksquare input:checked + label:after {
+  opacity: 1.0;
 }

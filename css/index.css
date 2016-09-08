@@ -1,3 +1,35 @@
+#announcements {
+  padding: 0 25% 0 18%;
+  margin: 0;
+  font-family: Quicksand, sans-serif;
+  height: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.announcement {
+  display: block;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.3em;
+  line-height: 2em;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: rgba(39,57,108,0.4);
+}
+
+.announcement > a,
+.announcement > div {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 0 1em;
+}
+
 #menu {
   font-size: 1em;
   line-height: 1.2em;

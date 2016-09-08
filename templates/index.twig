@@ -1,1 +1,21 @@
 {% extends "base.twig" %}
+
+{% block header %}
+ {{ parent() }}
+  <div id="announcements">
+  {% for announcement in announcements %}
+    <div class="announcement">
+      {% if announcement_links is defined and announcement_links[loop.index0] is defined and announcement_links[loop.index0] is not null %}
+        {% set announcement %}
+        <a href="{{ announcement_links[loop.index0] }}">{{ announcement }}</a>
+        {% endset %}
+      {% else %}
+        {% set announcement %}
+        <div>{{ announcement }}</div>
+        {% endset %}
+      {% endif %}
+      {{ announcement }}
+    </div>
+  {% endfor %}
+  </div>
+{% endblock header %}

@@ -82,14 +82,29 @@ $left_col = <<<"HTML"
   </div>
   <div>
     <label class="label">Common Questions</label><br>
-    <input type="checkbox" class="checkbox" value="How much is tuition?">
-    <label class="label">How much is tuition?</label><br>
-    <input type="checkbox" class="checkbox" valie="What payment plans are available?">
-    <label class="label">What payment plans are available?</label><br>
-    <input type="checkbox" class="checkbox" value="What are my career prospects?">
-    <label class="label">What are my career prospects?</label><br>
-    <input type="checkbox" class="checkbox" value="When does it start?">
-    <label class="label">When does it start?</label>
+    <span class="checksquare">
+      <input type="checkbox" class="checkbox" id="question1" name="questions[]" value="How much is tuition?">
+      <label for="question1"></label>
+    </span>
+    <label class="label" for="question1">How much is tuition?</label><br>
+
+    <span class="checksquare">
+      <input type="checkbox" class="checkbox" id="question2" name="questions[]" value="What payment plans are available?">
+      <label for="question2"></label>
+    </span>
+    <label class="label" for="question2">What payment plans are available?</label><br>
+
+    <span class="checksquare">
+      <input type="checkbox" class="checkbox" id="question3" name="questions[]" value="What are my career prospects?">
+      <label for="question3"></label>
+    </span>
+    <label class="label" for="question3">What are my career prospects?</label><br>
+
+    <span class="checksquare">
+      <input type="checkbox" class="checkbox" id="question4" name="questions[]" value="When does it start?">
+      <label for="question4"></label>
+    </span>
+    <label class="label" for="question4">When does it start?</label>
   </div>
   <div>
     <label class="label">Where did you hear about us?</label><br>
@@ -111,8 +126,11 @@ $center_col = <<<'HTML'
   <div>
     <label class="label">Phone</label><br>
     <input type="text" class="textbox"><br>
-    <input type="checkbox" class="checkbox">
-    <label class="label">Contact me via SMS</label>
+    <span class="checksquare">
+      <input type="checkbox" class="checkbox" id="sms-ok" name="sms-ok">
+      <label for="sms-ok"></label>
+    </span>
+    <label class="label" for="sms-ok">Contact me via SMS</label>
   </div>
   <div>
     <label class="label">Zip</label><br>
