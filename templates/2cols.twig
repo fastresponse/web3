@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+{% set css = ['2cols.css']|merge( css|default( [] ) ) %}
+
+{% block main %}
+  <div id="left-col">
+    {% block left %}
+    {{ left|raw }}
+    {% endblock left %}
+  </div>
+  <div id="right-col">
+    {% block right %}
+    {{ right|raw }}
+    {% endblock right %}
+  </div>
+{% endblock main %}
+
