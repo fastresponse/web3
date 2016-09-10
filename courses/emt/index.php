@@ -1,12 +1,11 @@
 <?php
 require_once '../../twig_loader.php';
 
-
 $course_code = 'EMT';
 $form_course_code = 'EMT';
 $course_color = '#144995';
 
-$content = <<<'HTML'
+$center = <<<'HTML'
 <h2>Five Reasons to Enroll</h2>
 <ol>
   <li>NREMT pass rate is higher than the national pass rate</li>
@@ -29,15 +28,15 @@ $content = <<<'HTML'
 <p>The Fast Response EMT course features Basic Life Support (BLS / CPR) certification, free tutoring, NREMT test preparation, and a maximum student to instructor skills training ratio of 9:1.</p>
 HTML;
 
-$left_images = array(
-  '/img/emt/classroom.jpg',
-  '/img/emt/bvm_backboard.jpg',
-  '/img/emt/sitting_spinal_immobile.jpg',
+$left = array(
+  array('image', '/img/emt/intubation_demo.jpg'),
+  array('image', '/img/emt/bvm_backboard.jpg'),
+  array('image', '/img/emt/sitting_spinal_immobile.jpg'),
 );
-$right_images = array(
-  '/img/emt/arm_bandage.jpg',
-  '/img/emt/intubation_demo.jpg',
-  '/img/emt/car_accident.jpg',
+$right = array(
+  array('video', 'http://view.vzaar.com/1399035/player?apiOn=true'),
+  array('image', '/img/emt/arm_bandage.jpg'),
+  array('image', '/img/emt/car_accident.jpg'),
 );
 
 
@@ -52,8 +51,8 @@ print $renderer->render('postsec.twig', array(
   'course_code' => $course_code,
   'form_course_code' => $form_course_code,
   'course_color' => $course_color,
-  'content' => $content,
-  'left_images' => $left_images,
-  'right_images' => $right_images,
+  'center' => $center,
+  'left' => $left,
+  'right' => $right,
 ));
 ?>

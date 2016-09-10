@@ -10,13 +10,13 @@ h3 {
 }
 
 #left-col, #center-col, #right-col {
-    flex: 0 0 32% !important;
-    width: 32% !important;
-    justify-content: flex-start;
+    /* flex: 0 0 32%; */
+    /* width: 32%; */
+    /* justify-content: flex-start; */
 }
 
 #center-col {
-  padding: 0 !important;
+  /* padding: 0; */
 }
 
 /*

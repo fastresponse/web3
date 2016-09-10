@@ -1,0 +1,19 @@
+#submenu_cpr_ceu {
+  display: flex;
+}
+
+figcaption {
+  
+}
+
+blockquote {
+  margin: 0 5%;
+  font-size: 90%;
+  line-height: 1.25em;
+}
+blockquote > div {
+  margin-top: 0.25em;
+}
+blockquote > div:first-child {
+  margin-top: 0;
+}

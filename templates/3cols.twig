@@ -5,17 +5,20 @@
 {% block main %}
   <div id="left-col">
     {% block left %}
-    {{ left|raw }}
+      {% set content = left %}
+      {% include 'col_item.twig' %}
     {% endblock left %}
   </div>
   <div id="center-col">
     {% block center %}
-    {{ center|raw }}
+      {% set content = center %}
+      {% include 'col_item.twig' %}
     {% endblock center %}
   </div>
   <div id="right-col">
     {% block right %}
-    {{ right|raw }}
+      {% set content = right %}
+      {% include 'col_item.twig' %}
     {% endblock right %}
   </div>
 {% endblock main %}
