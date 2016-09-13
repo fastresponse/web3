@@ -806,15 +806,38 @@ h2:first-child {
     /* font-size: 0.9em; */
 }
 
-figure img,
-figure video {
+figure {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  line-height: 1.5em;
+  background-color: rgba(0,0,0, 0.75);
+  z-index: 10;
+  padding: 2px 4px;
+  white-space: pre;
+}
+
+figcaption > div {
+}
+
+figure > img,
+figure > video {
     height: 100%;
     max-width: 100%;
     border: 2px solid #AAAABB;
     display: block;
     margin: 0 auto;
 }
-figure div {
+figure > div {
     font-size: 90%;
     line-height: 1.3em;
     text-align: left;
@@ -822,8 +845,9 @@ figure div {
     overflow: hidden;
     border-top: 1px dashed rgba(187,187,187, 0.5);
     padding-top: 0.7em;
+    overflow-y: auto;
 }
-figure:first-child div {
+figure:first-child > div {
     border-top: none;
 }
 figure h3 {
@@ -842,7 +866,9 @@ figure a {
   position: relative;
 }
 
-#left-col figure, #right-col figure {
+#left-col > figure, #right-col > figure,
+#left-col > a, #right-col > a {
+    display: block;
     height: 33%;
     width: 100%;
     padding: 2%;
@@ -871,24 +897,6 @@ figure a {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, rgba(39,57,108, 0.15), rgba(39,57,108, 0.5), rgba(39,57,108, 0.15));
   border-radius: 20;
-}
-
-figure {
-  position: relative;
-}
-
-figcaption {
-  position: relative;
-  top: -2.2em;
-  /*color: black;*/
-  /*text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white, -1px 1px 0 white;*/
-  font-weight: bold;
-  display: inline-block;
-  width: auto;
-  margin: 0 auto;
-  padding: 2px 4px;
-  background-color: rgba(0,0,0, 0.75);
-  z-index: 10;
 }
 
 

@@ -1,9 +1,14 @@
 {% if content is iterable %}
   {% for item in content %}
 
+  {% if item[3] is defined %}
+    <a href="{{ item[3] }}">
+  {% endif %}
+
     <figure>
-    {% if item[3] is defined %}
-      <a href="{{ item[3] }}">
+
+    {% if item[2] is defined %}
+      <figcaption>{{ item[2]|raw }}</figcaption>
     {% endif %}
 
     {% if item[0] == 'image' %}
@@ -17,14 +22,12 @@
 
     {% endif %}
 
-    {% if item[2] is defined %}
-      <figcaption>{{ item[2] }}</figcaption>
-    {% endif %}
-
-    {% if item[3] is defined %}
-      </a>
-    {% endif %}
     </figure>
+
+  {% if item[3] is defined %}
+    </a>
+  {% endif %}
+
   {% endfor %}
 
 {% else %}

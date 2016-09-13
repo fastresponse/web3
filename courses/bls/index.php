@@ -5,17 +5,17 @@ $course_code = 'BLS';
 $form_course_code = 'BLS';
 
 $center = <<<'HTML'
-<h2>AHA Approved - for Healthcare Providers</h2>
+<h2>AHA Approved - <span class="nowrap">for Healthcare Providers</span></h2>
 
-<blockquote class="stay-open red" id="new-bls-notice">
-  <div>The American Heart Association (AHA) has released their new 2015 Sciences and Guidelines update for Basic Life Support.</div>
-  <div>In order to provide classes that conform to these new guidelines, we have made the following changes.</div>
-  <div>There will no longer be separate 'Provider' and 'Renewal' courses.</div>
-  <div>The <span class="bold">BLS Provider</span> class now satisfies the requirements for both the initial certification and recertification. This course will be <span class="bold">4.5 - 5 hours</span> in length based on the student's experience level.</div>
-  <div>Please be advised that <span class="underline">all</span> students are required to bring the new <span class="bold">2015 Student Manual</span> to class in order to participate. The new Manual will be available for purchase at the Reception Desk.</div>
-</blockquote>
+<div class="ceu-notice" id="new-bls-notice">
+  <p>The American Heart Association (AHA) has released their new 2015 Sciences and Guidelines update for Basic Life Support.</p>
+  <p>In order to provide classes that conform to these new guidelines, we have made the following changes.</p>
+  <p>There will no longer be separate 'Provider' and 'Renewal' courses.</p>
+  <p>The <span class="bold">BLS Provider</span> class now satisfies the requirements for both the initial certification and recertification. This course will be <span class="bold">4.5 - 5 hours</span> in length based on the student's experience level.</p>
+  <p>Please be advised that <span class="underline">all</span> students are required to bring the new <span class="bold">2015 Student Manual</span> to class in order to participate. The new Manual will be available for purchase at the Reception Desk.</p>
+</div>
 
-<p class="stay-open">Our Basic Life Support classes adhere to the American Heart Association curriculum. This class is intended for current healthcare professionals and anyone entering a medical or healthcare related field. Current BLS Certification is considered a basic employment qualification for many of these professions. Certification cards are provided at the end of class and are valid for 2 years.</p>
+<p>Our Basic Life Support classes adhere to the American Heart Association curriculum. This class is intended for current healthcare professionals and anyone entering a medical or healthcare related field. Current BLS Certification is considered a basic employment qualification for many of these professions. Certification cards are provided at the end of class and are valid for 2 years.</p>
 
 <p>We strive to provide a fun, upbeat learning environment with enthusiastic instructors. Every class covers adult, child, and infant CPR and choking rescue, as well as usage of equipment such as AEDs (defibrilators), barrier devices, and bag-valve masks. We ensure that every student gets sufficient hands-on skills practice to be confident in using these skills in real emergency situations.</p>
 
@@ -78,9 +78,10 @@ $left = array(
   array('text', $elearning),
 );
 $right = array(
-  array('image', '/img/tmp.png', 'Register for BLS Provider Course', 'http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4103&pcatID=4102'),
-  array('image', '/img/tmp.png', 'Register for BLS eLearning Course', 'http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4243&pcatID=4242'),
-  array('text', $books),
+  array('image', '/img/tmp.png', 'Register for<br>BLS Provider Course', 'http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4103&pcatID=4102'),
+  array('image', '/img/tmp.png', 'Register for<br>BLS eLearning Course', 'http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4243&pcatID=4242'),
+  /*array('text', $books),*/
+  array('image', '/img/tmp.png', 'Book<br>Our Price: $20.00<br>Click for Details'),
 );
 
 
