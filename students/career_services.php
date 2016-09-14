@@ -5,15 +5,35 @@ $renderer = new TemplateRenderer();
 
 $content = <<<'HTML'
 <h2>Career Services Department</h2>
-<dl>
-  <dt>Phone</dt>
-  <dd><a href="tel:+1-510-849-4009,115">510-849-4009 x115</a></dd>
-  <dt>Email</dt>
-  <dd><a href="mailto: career.services@fastresponse.org">career.services@fastresponse.org</a></dd>
-</dl>
+<p>
+  <span>Phone</span>
+  <span><a href="tel:+1-510-849-4009,115">510-849-4009 x115</a></span>
+  <span style="white-space: pre;">  |  </span>
+  <span>Email</span>
+  <span><a href="mailto: career.services@fastresponse.org">career.services@fastresponse.org</a></span>
+</p>
 
 <hr>
 
+<h3 style="margin-top: 0;"><a href="/pdf/career_services/FR_Job_Seeking_Skills.pdf">Job Seeking Skills</a></h3>
+
+<h3><a href="/pdf/career_services/FR_Resume_Building.pdf">Resume Building</a></h3>
+<ul>
+  <li><a href="/documents/career_services/Sample Cover Letter - Referred.doc">Sample Cover Letter - Referred</a></li>
+  <li><a href="/documents/career_services/Sample Cover Letter - Not Referred.doc">Sample Cover Letter - Not Referred</a></li>
+  <li><a href="/documents/career_services/Sample Resume - EMT.doc">Sample Resume - EMT</a></li>
+  <li><a href="/documents/career_services/Sample Resume - Phlebotomy.doc">Sampe Resume - Phlebotomy</a></li>
+  <li><a href="/documents/career_services/Sample Resume - Medical Assisting.doc">Sample Resume - Medical Assisting</a></li>
+</ul>
+
+<h3><a href="/pdf/career_services/FR_Interview_Skills.pdf">Interview Skills</a></h3>
+<ul>
+  <li><a href="/documents/career_services/Sample Thank You Letter.doc">Sample Thank You Letter</a></li>
+  <li><a href="">Sample Interview Video</a></li>
+</ul>
+HTML;
+
+$blah = <<<'HTML'
 <h2 class="trigger">Job Seeking Skills</h2>
 <p>Finding a job is a job within itself! A new career is not going to come to you without effort. An effective job search requires that you actively pursue leads from a variety of sources.</p>
 <p>Each day, make it your goal to accomplish at least one of the following action items:</p>

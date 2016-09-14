@@ -8,7 +8,7 @@ $center = <<<'HTML'
 <h2>AHA Approved - <span class="nowrap">for Healthcare Providers</span></h2>
 
 <div class="ceu-notice" id="new-bls-notice">
-  <p>The American Heart Association (AHA) has released their new 2015 Sciences and Guidelines update for Basic Life Support.</p>
+  <p>The American Heart Association (AHA) has released their new 2015 Sciences and Guidelines update for <span class="nowrap">Basic Life Support.</span></p>
   <p>In order to provide classes that conform to these new guidelines, we have made the following changes.</p>
   <p>There will no longer be separate 'Provider' and 'Renewal' courses.</p>
   <p>The <span class="bold">BLS Provider</span> class now satisfies the requirements for both the initial certification and recertification. This course will be <span class="bold">4.5 - 5 hours</span> in length based on the student's experience level.</p>
@@ -19,8 +19,7 @@ $center = <<<'HTML'
 
 <p>We strive to provide a fun, upbeat learning environment with enthusiastic instructors. Every class covers adult, child, and infant CPR and choking rescue, as well as usage of equipment such as AEDs (defibrilators), barrier devices, and bag-valve masks. We ensure that every student gets sufficient hands-on skills practice to be confident in using these skills in real emergency situations.</p>
 
-<div>American Heart Association Approved</div>
-<div>Training Center #CA03190</div>
+<div>American Heart Association Approved - <span class="nowrap">Training Center #CA03190</span></div>
 HTML;
 
 $course_details = <<<'HTML'
@@ -74,14 +73,16 @@ HTML;
 
 $left = array(
   array('image', '/img/tmp.png', 'View Calendar', 'http://www.ssreg.com/fastresponse/calendar.asp?page=Calendar'),
-  array('text', $course_details),
-  array('text', $elearning),
+  array('image', '/img/tmp.png', 'Provider Course Details', 'details.php#provider'),
+  array('image', '/img/tmp.png', 'eLearning Course Details', 'details.php#elearning'),
+  //array('text', $course_details),
+  //array('text', $elearning),
 );
 $right = array(
   array('image', '/img/tmp.png', 'Register for<br>BLS Provider Course', 'http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4103&pcatID=4102'),
   array('image', '/img/tmp.png', 'Register for<br>BLS eLearning Course', 'http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4243&pcatID=4242'),
-  /*array('text', $books),*/
-  array('image', '/img/tmp.png', 'Book<br>Our Price: $20.00<br>Click for Details'),
+  //array('text', $books),
+  array('image', '/img/tmp.png', 'Books<br><span class="red">Required for class</span><br>Click for Details', 'details.php#books'),
 );
 
 

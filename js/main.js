@@ -31,6 +31,15 @@ $(document).ready(function() {
     $(this).attr('src', $(this).attr('data-src'));
   });
 
+  var hash_i = document.URL.indexOf('#');
+  if (hash_i > -1) {
+    setTimeout(function() {
+      var hash_i = document.URL.indexOf('#');
+      var hash_url = document.URL.substr(hash_i+1);
+      $('#details_' + hash_url).fadeToggle().fadeToggle();
+    }, 1000);
+  }
+
   $('[data-submenu]').on('click', function(event) {
     event.preventDefault();
 
@@ -82,7 +91,7 @@ $(document).ready(function() {
       });
     });
 
-  });
+  }); // end of on click handler
 
   /*
   var width = $(window).width();

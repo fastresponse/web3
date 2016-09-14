@@ -1,29 +1,29 @@
 main {
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    overflow-y: auto;
+    align-items: stretch;
+    overflow: auto;
 }
 
 main a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-h2, h3, p {
-  margin-top: 0;
+main li {
+    line-height: 1.6em;
 }
 
 #left-col, #right-col {
-    flex: 0 0 50% !important;
-    width: 50% !important;
-    justify-content: flex-start;
-    height: auto;
+    flex: 1;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
 #right-col {
     border-left: 1px dashed rgba(187, 187, 187, 0.50);
-    padding-left: 1%;
+    margin-left: 10px;
+    padding-left: 5px;
 }
-#left-col {
-    padding-right: 1%;
-}
+

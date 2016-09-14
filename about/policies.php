@@ -3,6 +3,7 @@ require_once '../twig_loader.php';
 
 $left = <<<'HTML'
 <h2>Continuing Education Class Policies</h2>
+
 <h3>CEU Classes Cancellation Policy</h3>
 <p><span class="red">We do not issue refunds for course fees.</span> All registrations are final.</p>
 <p>If you cancel or fail to attend the class you have registered for, <span class="red">you will forfeit your entire course fee.</span></p>

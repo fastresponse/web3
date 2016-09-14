@@ -1,13 +1,11 @@
 {% extends 'base.twig' %}
 
-{% set css = ['2cols.css']|merge( css|default( [] ) ) %}
-
 {% block main %}
-  <div id="left-col">
-    {% block left %}
-      {% set content = left %}
+  <div id="center-col">
+    {% block center %}
+      {% set content = center %}
       {% include 'col_item.twig' %}
-    {% endblock left %}
+    {% endblock center %}
   </div>
   <div id="right-col">
     {% block right %}

@@ -2,7 +2,10 @@
 require_once '../twig_loader.php';
 
 $content = <<<'HTML'
-<h2>We are approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml">Bureau of Private and Postsecondary Education</a></h2>
+<h2>We are approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml" class="underline">Bureau of Private and Postsecondary Education</a></h2>
+
+<blockquote>A student or any member of the public may contact the Bureau of Private Postsecondary Education at any time about this institution by calling toll free: 888-370-7589, writing to Bureau for Private Postsecondary Education, P.O. Box 980818, West Sacramento, CA 95798-0818 or 2535 Capitol Oaks Drive, Suite 400, Sacramento, CA 95833, or by completing a complaint form, which can be obtained on the Bureau's internet website: <a href="http://www.bppe.ca.gov" class="underline">http://www.bppe.ca.gov</a>.</blockquote>
+
 <p class="bold italic">Fast Response School of Health Care Education is a private postsecondary educational school.</p>
 <p>We are an American Heart Association (AHA), American Safety and Health Institute (ASHI) and American Academy of Pediatrics (AAP) affiliated training facility. We provide CEUs (Continuing Education Units) for EMS personnel, Nurses and other medical professionals.</p>
 <p>Our Phlebotomy Technician program is approved by the State of California Department of Health Services, and our Emergency Medical Technician program is approved by the State of California Emergency Medical Services Authority.</p>

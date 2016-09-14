@@ -1,32 +1,66 @@
-.contact-form {height: 100%;width: 100%;display: flex;flex-flow: row nowrap;align-items: flex-start;justify-content: space-between;}
-
-.contact-form .label {font-size: 0.9em;font-weight: bold;/* margin-top: 20px; *//* margin-left: 20px; */display: inline;}
-
-.contact-form .drop-down {display: inline-block;border: 2px solid;padding: 1px 4px;font-size: 0.9em;}
-
-.contact-form .textbox {display: inline-block;border: 2px solid;height: 1.5em;width: 100%;background: rgba(0,0,0, 0.8);}
-
-.contact-form .checkbox {display: inline;/* height: 1.2em; *//* width: 1.2em; */border: 2px solid;padding: 2px;vertical-align: text-bottom;}
-
-.contact-form .button {border: 4px solid;background-color: rgba(20,20,50,0.9);padding: 10px;display: inline-block;width: auto;/* margin: 20px 0; */}
-
-.contact-form .label:first-child {
-    margin-left: 0;
-    margin-top: 0;
+.contact-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.contact-form > div {display: flex;flex-flow: column nowrap;justify-content: flex-start;align-items: flex-start;height: 100%;width: 32%;}
+.contact-form .label {
+  font-size: 0.9em;
+  font-weight: bold;
+  display: inline;
+}
+
+.contact-form .drop-down {
+  display: inline-block;
+  border: 2px solid;
+  padding: 1px 4px;
+  font-size: 0.9em;
+}
+
+.contact-form .textbox {
+  display: inline-block;
+  border: 2px solid;
+  height: 1.5em;
+  width: 100%;
+  background: rgba(0,0,0, 0.8);
+}
+
+.contact-form .checkbox {
+  display: inline;
+  border: 2px solid;
+  padding: 2px;
+  vertical-align: text-bottom;
+}
+
+.contact-form .label:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.contact-form > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 32%;
+}
 
 .contact-form > div > div {
     width: 100%;
 }
 
-#center-col {overflow: hidden;padding: 0 5%;}
+#center-col {
+  overflow: hidden;
+  padding: 0 5%;
+}
 
 #left-col {
     flex: 0 0 29%;
     width: 29%;
-    /* padding-right: 3%; */
 }
 
 #submenu_contact_us {
@@ -59,6 +93,10 @@ main {
     align-items: stretch;
 }
 
+h3 {
+    margin-bottom: 1em;
+}
+
 #map_col, #directions_col {
     display: flex;
     flex-flow: column;
@@ -84,6 +122,11 @@ input[type="submit"] {
     margin-top: 1em;
     min-width: 15em;
     color: #BBBBBB;
+    border: 4px solid;
+    background-color: rgba(20,20,50,0.9);
+    padding: 10px;
+    display: inline-block;
+    width: auto;
 }
 input[type="checkbox"] {
 }
@@ -134,8 +177,10 @@ option {
   top: -5px;
 }
 .checksquare input + label:hover:after {
-  opacity: 0.3;
+  /* This doesn't work too well in touch mode */
+  /*opacity: 0.3;*/
 }
 .checksquare input:checked + label:after {
   opacity: 1.0;
 }
+
