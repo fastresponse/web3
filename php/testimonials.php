@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'] . '/php/dbconn.php');
+require_once('dbconn.php');
 if (empty($handle))
   $handle = db_connect();
 

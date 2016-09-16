@@ -1,24 +1,23 @@
 <?php
 require_once '../../twig_loader.php';
 
-
 $course_code = 'PHM';
 $form_course_code = 'PHM';
 $course_color = '#43c2bb';
 
-$content = <<<'HTML'
+$center = <<<'HTML'
 <h2>Five Reasons to Enroll</h2>
 <ol>
-  <li>Faculty and staff are committed to making the trainees succeed, affordable costs, the Program is accredited with the American Society of Health-System Pharmacists (ASHP).</li>
-  <li>The Program is recommended from faculty and industry partners, guaranteed externships, length of the program, easy commute, various classroom training methods (hands-on, verbal, visual).</li>
-  <li>A desire to help others while being paid well at the job site, helpful staff, being proud of the career choice.</li>
-  <li>Interest in the study of medicine, convenient, safe and comfortable environment!</li>
-  <li>The classroom hours worked well with my work schedule. Great training from great Instructors!</li>
+  <li>Our program is accredited by the American Society of Health-System Pharmacists (ASHP).</li>
+  <li>Guaranteed externships for all students!</li>
+  <li>Great job outlook.</li>
+  <li>We provide a convenient, safe, and comfortable learning environment.</li>
+  <li>Faculty and staff are committed to your success!</li>
 </ol>
 
 <p id="testimonial-link"><a href="/testimonials/phm/">Read what our students have to say</a></p>
 
-<h2>Subheader goes here</h2>
+<h2>A Dependable Career</h2>
 
 <p>Pharmacy Technicians (CPhTs) serve as a liaison between a patient and a pharmacist. Under the supervision of a pharmacist, they supply medicines to patients, assemble medications for prescriptions, and provide information to patients and other health care professionals. They also manage areas of medicines supply, produce medicines in hospitals and they may supervise other pharmacy staff.</p>
 
@@ -31,31 +30,31 @@ $content = <<<'HTML'
 <p>If you want to become a highly-skilled health care professional, capable of competing in the job market, come to Fast Response.</p>
 HTML;
 
-$left_images = array(
-  '/img/phm/PHM Class photo 2015-06.jpg',
-  '/img/phm/PHM Distributing Explaining Meds (8).jpg',
-  '/img/phm/PHM Non-sterile Mixing Meds (26).jpg',
+$left = array(
+  array('image', '/img/tmp.png'),
+  array('image', '/img/tmp.png'),
+  array('image', '/img/tmp.png'),
 );
-$right_images = array(
-  '/img/tmp.png',
-  '/img/tmp.png',
-  '/img/tmp.png',
+$right = array(
+  array('image', '/img/tmp.png'),
+  array('image', '/img/tmp.png'),
+  array('image', '/img/tmp.png'),
 );
 
 
 $renderer = new TemplateRenderer();
 
 print $renderer->render('postsec.twig', array(
-  'title' => 'Pharmacy Technician Program at Fast Response', 
+  'title' => 'Pharmacy Technician Course at Fast Response', 
   'page_header' => 'Pharmacy Technician Program',
   'description' => '',
-  'keywords' => 'fast response, fast, response, health care, healthcare, school, education, training, certification, ',
+  'keywords' => 'fast response, fast, response, health care, healthcare, school, education, training, certification',
   'canonical' => 'http://www.fastresponse.org/courses/phm/',
   'course_code' => $course_code,
   'form_course_code' => $form_course_code,
   'course_color' => $course_color,
-  'content' => $content,
-  'left_images' => $left_images,
-  'right_images' => $right_images,
+  'center' => $center,
+  'left' => $left,
+  'right' => $right,
 ));
 ?>

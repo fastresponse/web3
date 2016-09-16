@@ -55,12 +55,48 @@
 
 #center-col {
   overflow: hidden;
-  padding: 0 5%;
+  padding: 0;
 }
 
-#left-col {
-    flex: 0 0 29%;
-    width: 29%;
+#left-col,
+#center-col,
+#right-col {
+  flex: 0 30%;
+}
+#center-col,
+#right-col {
+  margin-left: 2%;
+  padding-left: 2%;
+  border-left: 1px dashed rgba(187,187,187, 0.5);
+}
+
+.contact-form > #center-col {
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-left: 0;
+  border-left: none;
+}
+.contact-form > #right-col {
+  flex: 0 25%;
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+}
+
+.policy-links {
+  font-size: 0.8em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+dt {
+  font-weight: bold;
+}
+dt:before {
+  content: '\2022  ';
+}
+main a {
+  text-decoration: underline;
 }
 
 #submenu_contact_us {
@@ -119,7 +155,7 @@ a.map {
 
 input[type="submit"] {
     font-weight: bold;
-    margin-top: 1em;
+    margin: 1em auto 0;
     min-width: 15em;
     color: #BBBBBB;
     border: 4px solid;
@@ -139,6 +175,10 @@ select {
 }
 option {
     background-color: black;
+}
+option:checked, option:hover {
+  background: #777777;
+  color: black;
 }
 
 .checksquare {

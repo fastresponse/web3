@@ -130,7 +130,7 @@ $center_col = <<<'HTML'
       <input type="checkbox" class="checkbox" id="sms-ok" name="sms-ok">
       <label for="sms-ok"></label>
     </span>
-    <label class="label" for="sms-ok">Contact me via SMS</label>
+    <label class="label" for="sms-ok">Contact me via SMS (text message)</label>
   </div>
   <div>
     <label class="label">Zip</label><br>
@@ -142,8 +142,8 @@ $center_col = <<<'HTML'
     <textarea class="textbox" style="height: 5em;" cols="20" rows="5"></textarea>
   </div>
   <input type="submit" class="button" value="Submit">
-  <div style="font-size: 0.7em;">
-    <a href="">Privacy Policy</a> | <a href="">Terms and Conditions</a>
+  <div class="policy-links">
+    <a href="/about/policies.php#privacy_policy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/about/policies.php#website_terms">Terms and Conditions</a>
   </div>
 HTML;
 
@@ -155,11 +155,13 @@ print $renderer->render('contact.twig', array(
   'description' => "Fast Response offers the Bay Area's most comprehensive education and resources for healthcare professionals including entry-level courses, certifications, and continuing education units.",
   'keywords' => 'fast response, fast, response, health care, healthcare, school, education, training, certification, emt, emergency medical technician, medical assistant,  phlebotomy, phlebotomist, pharmacy tech, pharmacy technician, paramedic, continuing education, cpr, bls, basic life support, acls, advanced life support, ecg, ekg',
   'canonical' => 'http://www.fastresponse.org/',
-  'css' => array('contact.css'),
   'active' => 'contact',
   'left' => $left_col,
   'center' => $center_col,
-  'right_images' => array('/img/tmp.png','/img/tmp.png',  '/img/tmp.png'),
-  'right_captions' => array('Fast Response', null, null),
+  'right' => array(
+    array('image', '/img/tmp.png', 'Fast Response'),
+    array('image', '/img/tmp.png', ),
+    array('image', '/img/tmp.png', ),
+  ),
 ));
 ?>

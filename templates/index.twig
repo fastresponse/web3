@@ -7,11 +7,11 @@
     <div class="announcement">
       {% if announcement_links is defined and announcement_links[loop.index0] is defined and announcement_links[loop.index0] is not null %}
         {% set announcement %}
-        <a href="{{ announcement_links[loop.index0] }}">{{ announcement }}</a>
+        <a href="{{ announcement_links[loop.index0] }}">{{ announcement|raw }}</a>
         {% endset %}
       {% else %}
         {% set announcement %}
-        <div>{{ announcement }}</div>
+        <div>{{ announcement|raw }}</div>
         {% endset %}
       {% endif %}
       {{ announcement }}

@@ -26,7 +26,7 @@ $content = <<<'HTML'
   <dd>We can store bicycles in our warehouse, but you must lock them and understand that we are not responsible for them.</dd>
 
   <dt>Can I pay cash when I get there?</dt>
-  <dd>Yes, and if a space is available you may take the class. It is best to call in advance to register and pay for a class or register online. Classes often fill up several days or even weeks prior to the start date. We cannot reserve a space without payment. Please see our <a href="/policies/#ceu">payment policies.</a></dd>
+  <dd>Yes, and if a space is available you may take the class. It is best to call in advance to register and pay for a class or register online. Classes often fill up several days or even weeks prior to the start date. We cannot reserve a space without payment. Please see our <a href="/about/policies.php#ceu_policy">payment policies.</a></dd>
 
   <dt>Can I pay with my Visa gift card?</dt>
   <dd>Unfortunately our system cannot process Visa gift cards.</dd>

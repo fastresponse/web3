@@ -1,6 +1,6 @@
 <?php
 
-require($_SERVER['DOCUMENT_ROOT'] . '/php/class.ziplookup.php');
+require('class.ziplookup.php');
 
 $dest = filter_input(INPUT_POST, 'zip', FILTER_SANITIZE_NUMBER_INT);
 

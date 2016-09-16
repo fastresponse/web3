@@ -2,7 +2,8 @@
 require_once '../twig_loader.php';
 
 $left = <<<'HTML'
-<h2>Continuing Education Class Policies</h2>
+<div id="details_ceu_policy">
+<h2><a name="ceu"></a>Continuing Education Class Policies</h2>
 
 <h3>CEU Classes Cancellation Policy</h3>
 <p><span class="red">We do not issue refunds for course fees.</span> All registrations are final.</p>
@@ -18,10 +19,12 @@ $left = <<<'HTML'
 <h3>CEU Classes Late Arrival Policy</h3>
 <p>Our classes start on time. Please plan your trip accordingly and remember to allow time for parking.</p>
 <p>If you are late for your scheduled class, you will be not be admitted into class and you must reschedule (reschedule fee applies).</p>
+</div>
 
 <hr>
 
-<h2>Fast Response Privacy Policy</h2>
+<div id="details_privacy_policy">
+<h2><a name="privacy_policy"></a>Fast Response Privacy Policy</h2>
 
 <h3>What information do we collect?</h3>
 <p>We collect information from you when you register on our site or place an order.</p>
@@ -52,10 +55,12 @@ $left = <<<'HTML'
 
 <h3>Contacting Us</h3>
 <p>If there are any questions regarding this Privacy Policy, you may contact us <a href="/contact/">here</a>.</p>
+</div>
 HTML;
 
 $right = <<<'HTML'
-<h2>Website Terms And Conditions</h2>
+<div id="details_website_terms">
+<h2><a name="website_terms"></a>Website Terms And Conditions</h2>
 
 <h3>Acknowledging our Terms and Conditions Agreement</h3>
 <p>These Terms and Conditions govern your viewing and use of our website. By visiting and utilizing our site, using any of the tools and services provided via our site, or registering an account, you thereby agree to be bound by each of the Terms and Conditions of this Agreement and you accept these Terms and Conditions in full. If you disagree with these Terms and Conditions, you should not use our site. Fast Response School of Health Care Education provides this site as a service for our users, site visitors, registered and prospective students and account holders.</p>
@@ -164,6 +169,7 @@ $right = <<<'HTML'
  
 <h3>Questions, Concerns or Complaints</h3>
 <p>Please feel free to contact Fast Response School of Health Care Education <a href="/contact/">here</a>.</p>
+</div>
 HTML;
 
 $renderer = new TemplateRenderer();

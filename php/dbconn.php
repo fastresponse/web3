@@ -1,7 +1,7 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/php/dbsettings.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/php/frlib.php');
+require_once('dbsettings.php');
+require_once('frlib.php');
 
 /* all functions related to database connections and queries */
 
