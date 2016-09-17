@@ -1,16 +1,32 @@
 <?php
-// note: this path is relative to where the final pages are
+
+// note: require/include paths are relative to where the final pages are
 // NOT where this file is located
 require_once '../../twig_loader.php';
 
 /*
- * Expected vars:
+ * Expected vars to be set in the including file:
  * $canonical
  * $title
  * $page_header
  * $course_code
  */
 
+require_once '../../php/class.testimonials.php';
+
+$testimonial_ob = new TestimonialList();
+$testimonial_ob->set_categories( array($course_code) );
+if ($testimonial_ob->do_testimonial_query()) {
+  $testimonials = $testimonial_ob->get_testimonial_results();
+  print_r($testimonials);
+}
+else {
+  $testimonials = null;
+}
+
+
+
+/*
 $testimonials = array(
   array(
     'name' => 'Firstname Lastname',
@@ -41,6 +57,7 @@ $testimonials = array(
     'image' => '/img/testimonials/evan_k.jpg',
   ),
 );
+ */
 
 $right_images = array(
   '/img/tmp.png',
