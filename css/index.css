@@ -9,7 +9,9 @@
 }
 
 .announcement {
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   height: 100%;
   text-align: center;
   vertical-align: middle;
@@ -25,7 +27,6 @@
 .announcement > a,
 .announcement > div {
   display: inline-block;
-  height: 100%;
   width: 100%;
   padding: 0 1em;
 }
