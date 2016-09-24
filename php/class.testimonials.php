@@ -47,16 +47,12 @@ class TestimonialList {
   public function do_testimonial_query() {
     if (!$this->get_category_values()) return null;
 
-    print('1');
-
     $bitmask = $this->calc_categories_bitmask($this->categories);
     if ($bitmask === null) return null;
 
-    print('2');
-
     $this->testimonial_results = basic_query($this->handle,
       array('name', 'title',
-            'DATE_FORMAT(date, ' . self::DATE_FORMAT . ') AS date',
+            'DATE_FORMAT(date, "' . self::DATE_FORMAT . '") AS date',
             'quote', 'image', 'video', 'categories'), # select
       'testimonials', # from
       array('(categories & :catnuma) = :catnumb'), # where
@@ -65,8 +61,6 @@ class TestimonialList {
       array(':catnuma' => $bitmask,
             ':catnumb' => $bitmask) # replacement parameters
     );
-
-    print('3');
 
     shuffle($this->testimonial_results);
 

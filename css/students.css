@@ -18,7 +18,47 @@ dt:first-child, li:first-child {
   margin-top: 0;
 }
 
-
 main > section {
     flex: 1;
+}
+
+h2 + dl {
+  margin-top: 0.5em;
+}
+
+.entry {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px dashed rgba(187,187,187, 0.5);
+}
+.entry:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.entry:last-child {
+  padding-bottom: 2em;
+}
+
+.agencies {
+  margin-left: 0;
+  line-height: 0;
+}
+.agencies dt {
+  margin-top: 5px;
+}
+.agencies li {
+  margin-top: 0;
+}
+
+.agencies dl {
+  margin-top: 0;
+  display: inline-block;
+  line-height: 21px;
+  padding: 0px 20px;
+}
+
+.agencies:focus dl {
+  padding-top: 5px;
+  padding-bottom: 10px;
 }

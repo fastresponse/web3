@@ -18,7 +18,6 @@ $testimonial_ob = new TestimonialList();
 $testimonial_ob->set_categories( array($course_code) );
 if ($testimonial_ob->do_testimonial_query()) {
   $testimonials = $testimonial_ob->get_testimonial_results();
-  print_r($testimonials);
 }
 else {
   $testimonials = null;

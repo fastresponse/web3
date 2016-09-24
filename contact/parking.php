@@ -8,7 +8,7 @@ $content = <<<'HTML'
   <li><strong>Residential/Street Parking:</strong> West of Martin Luther King Jr. Way for up to two hours.</li>
   <li><strong>Motorcycle Parking:</strong> Free parking for motorcycles is located on the corner of Allston Way and Harold Street <span class="nowrap">(1/4 block from the school).</span></li>
   <li><strong>Parking Garages:</strong> There are several parking garages in the area. These rates and hours are not guaranteed -- Please contact the garage prior to your visit.
-  <ul>
+  <ul class="lots">
 	  <li>
 	    <div>Standard Parking</div>
 	    <div>2020 Kittredge St between Harold and Milvia <a href="tel: +15106651662" class="nowrap">510-665-1662</a></div>

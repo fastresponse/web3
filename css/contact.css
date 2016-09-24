@@ -123,6 +123,10 @@ main > ul.parking li {
 main > ul.parking > li:first-child {
   margin-top: 0;
 }
+main > ul.parking ul.lots {
+}
+main > ul.parking ul.lots li {
+}
 
 
 main {
@@ -139,13 +143,19 @@ h3 {
 }
 #map_col {
     justify-content: center;
+    width: 400px;
 }
 #directions_col {
     justify-content: space-around;
+    min-width: 290px;
 }
 
 a.map {
     display: inline-block;
+    max-width: 100%;
+}
+a.map img {
+    max-width: 100%;
 }
 
 #directions_col form {
@@ -221,6 +231,4 @@ option:checked, option:hover {
   /*opacity: 0.3;*/
 }
 .checksquare input:checked + label:after {
-  opacity: 1.0;
-}
-
+  opacity: 1.0
