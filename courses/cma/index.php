@@ -31,14 +31,14 @@ $center = <<<'HTML'
 HTML;
 
 $left = array(
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
+  array('image', '/img/cma/MAC Inject and ECG 001-01.jpg'),
+  array('image', '/img/cma/MAC ECG 001-01.jpg'),
+  array('image', '/img/cma/MAC Inject and Measure 001-01.jpg'),
 );
 $right = array(
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
+  array('image', '/img/cma/MAC Student 001-01.jpg'),
+  array('image', '/img/cma/MAC Bloodpressure 003-01.jpg'),
+  array('image', '/img/cma/MAC Baby Vape 001-01.jpg'),
 );
 
 

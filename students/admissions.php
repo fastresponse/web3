@@ -38,8 +38,8 @@ $content = <<<'HTML'
   <dt><a href="/pdf/admissions/Registrar Request Form.pdf" target="_blank">Registrar Request Form</a></dt>
   <dd>Used for requesting copies of transcripts, immunization records, background checks, and other student information.</dd>
 
-  <dt><a href="/pdf/admissions/FERPA Form.pdf" target="_blank">FERPA Student Information Release Form</a></dt>
-  <dd>Used to send a copy of your student information to a third party. Commonly used for academic and immunization records.</dd>
+  <dt><a href="/pdf/admissions/Student Consent To Release Form.pdf" target="_blank">Student Consent To Release Form</a></dt>
+  <dd>Used to allow the release of your educational records to third parties.</dd>
 
   <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
   <dd>To be filled out and turned in to the school registrar once externship is completed. This form can be used for EMT, Phlebotomy, Medical Assistant, and Sterile Processing courses.</dd>

@@ -7,7 +7,7 @@ $emt = <<<'HTML'
 <h2>Emergency Medical Technician Resources</h2>
 <dl>
   <dt><h3>Ambulance Driver Certificate Information</h3></dt>
-  <dd tabindex="0" class="slidefade">If you wish to drive an ambulance used commercially in emergency service, you may apply at any DMV office for an Ambulance Driver certificate. You may also purchase an 'Ambulance Driver Handbook' for $5.<br><span class="indicator-left"></span> View <span class="indicator-right"></span><br>
+  <dd tabindex="0" class="slidefade">If you wish to drive an ambulance used commercially in emergency service, you may apply at any DMV office for an Ambulance Driver certificate. You may also purchase an 'Ambulance Driver Handbook' for $5.<br><span class="indicator-left"></span> View Details <span class="indicator-right"></span><br>
     <dl class="hiddencontent">
       <dt>The following requirements must be met before applying:</dt>
       <dd>Be at least 18 years of age.</dd>
@@ -28,7 +28,7 @@ $emt = <<<'HTML'
   </dd>
 
   <dt><h3>Greater Bay Area EMS Agencies</h3></dt>
-  <dd tabindex="0" class="agencies slidefade"><span class="indicator-left"></span> View <span class="indicator-right"></span><br>
+  <dd tabindex="0" class="agencies slidefade"><span class="indicator-left"></span> View List <span class="indicator-right"></span><br>
     <dl class="hiddencontent">
       <dt>Alameda County</dt>
       <dd><ul>

@@ -1,6 +1,23 @@
 <?php
 require_once '../twig_loader.php';
 
+require_once '../php/class.course_dates.php';
+$program_dates = array(
+  // these need to be codes not names
+  'EMT' => array(),
+  'Phlebotomy' => array(),
+  'Pharmacy Technician' => array(),
+  'Medical Assistant' => array(),
+  'Paramedic' => array(),
+);
+$courseDateOb = new CourseDateList();
+$courseDateOb->set_limits(0, 10);
+foreach ($program_dates as $key => &$value) {
+  $courseDateOb->set_course($key);
+  $dates = $courseDateOb->get_course_dates();
+  $value = array_column($dates, 'showdate');
+}
+
 $programs = array(
   'EMT',
   'Phlebotomy',
@@ -35,6 +52,7 @@ $source_hosts = array(
 
 //$select_options_programs = array_to_select_options($programs, $form_course_name);
 $select_options_programs = <<<'HTML'
+<option value="none">&ndash; Select a program &ndash;</option>
 <option value="EMT">EMT</option>
 <option value="Phlebotomy">Phlebotomy</option>
 <option value="Pharmacy Technician">Pharmacy Technician</option>
@@ -45,6 +63,7 @@ HTML;
 
 //$select_options_sources = array_to_option_html($sources, get_referring_source());
 $select_options_sources = <<<'HTML'
+<option value="none">&ndash; Select one &ndash;</option>
 <option value="Google">Google</option>
 <option value="Facebook">Facebook</option>
 <option value="Yahoo / Bing">Yahoo / Bing</option>
@@ -74,10 +93,13 @@ $left_col = <<<"HTML"
   <div>
     <label class="label">Course Dates</label><br>
     <select class="drop-down">
+      <option value="none">&ndash; N/A &ndash;</option>
+<!--
       <option value="Oct 31st 2016">Oct 31st 2016</option>
       <option value="Nov 24th 2016">Nov 24th 2016</option>
       <option value="Dec 25th 2016">Dec 25th 2016</option>
       <option value="Dec 31st 2016">Dec 31st 2016</option>
+-->
     </select>
   </div>
   <div>

@@ -990,3 +990,10 @@ nav {
 dd {
     margin-left: 20px;
 }
+
+
+hr.short {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}

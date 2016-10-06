@@ -27,14 +27,14 @@ $center = <<<'HTML'
 HTML;
 
 $left = array(
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
+  array('image', '/img/cpt/PHL Puncture 001-01.jpg'),
+  array('image', '/img/cpt/PHL Fake Arm Blood Draw 003-01.jpg'),
+  array('image', '/img/cpt/PHL Face and Puncture 001-01.jpg'),
 );
 $right = array(
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
+  array('image', '/img/cpt/PHL Fake Arm Blood Draw 001-01.jpg'),
+  array('image', '/img/cpt/PHL Erich Table Demo-01.jpg'),
+  array('image', '/img/cpt/PHL Individual with Tray-01.jpg'),
 );
 
 

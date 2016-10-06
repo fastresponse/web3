@@ -49,14 +49,14 @@ $center = <<<'HTML'
 HTML;
 
 $left = array(
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
+  array('image', '/img/paramedic/PAR Intubation 001-01.jpg'),
+  array('image', '/img/paramedic/PAR C-Spine 001-01.jpg'),
+  array('image', '/img/paramedic/PAR Variety 001-01.jpg'),
 );
 $right = array(
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
-  array('image', '/img/tmp.png'),
+  array('image', '/img/paramedic/PAR Injection 001-01.jpg'),
+  array('image', '/img/paramedic/PAR Intubate and Intubate 001-01.jpg'),
+  array('image', '/img/paramedic/PAR Injection 002-01.jpg'),
 );
 
 
