@@ -29,6 +29,12 @@ $content = <<<'HTML'
   <dt><a href="/pdf/admissions/Immunization Requirements - Paramedic.pdf" target="_blank">Immunization Form - Paramedic</a></dt>
   <dd>Checklist for required immunizations. To be filled out by a licensed nurse or physician.</dd>
 
+  <dt><a href="/pdf/admissions/Declination For Seasonal Influenza Vaccination.pdf" target="_blank">Declination For Seasonal Influenza Vaccination</a></dt>
+  <dd>Form to be filled out to decline a flu vaccination.</dd>
+
+  <dt><a href="/pdf/admissions/Declination For Hepatitis-B Vaccination.pdf" target="_blank">Declination For Hepatitis-B Vaccination</a></dt>
+  <dd>Form to be filled out to decline a hepatitis-B vaccination.</dd>
+
   <dt><a href="/pdf/admissions/Immunizations - Clinics in Alameda County.pdf" target="_blank">Immunizations - Clinics in Alameda County</a></dt>
   <dd>A list of clinics in Alameda county that provide immunization services.</dd>
 

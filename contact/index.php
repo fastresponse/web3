@@ -2,30 +2,47 @@
 require_once '../twig_loader.php';
 
 require_once '../php/class.course_dates.php';
-$program_dates = array(
-  // these need to be codes not names
-  'EMT' => array(),
-  'Phlebotomy' => array(),
-  'Pharmacy Technician' => array(),
-  'Medical Assistant' => array(),
-  'Paramedic' => array(),
-);
-$courseDateOb = new CourseDateList();
-$courseDateOb->set_limits(0, 10);
-foreach ($program_dates as $key => &$value) {
-  $courseDateOb->set_course($key);
-  $dates = $courseDateOb->get_course_dates();
-  $value = array_column($dates, 'showdate');
-}
 
 $programs = array(
-  'EMT',
-  'Phlebotomy',
-  'Pharmacy Technician',
-  'Medical Assistant',
-  'Paramedic',
-  'Other',
+  'EMT' => array(
+    'code' => 'EMT',
+    'dates' => array(),
+  ),
+  'Phlebotomy' => array(
+    'code' => 'CPT',
+    'dates' => array(),
+  ),
+  'Pharmacy Technician' => array(
+    'code' => 'PHM',
+    'dates' => array(),
+  ),
+  'Medical Assistant' => array(
+    'code' => 'CMA',
+    'dates' => array(),
+  ),
+  'Paramedic' => array(
+    'code' => 'Paramedic',
+    'dates' => array(),
+  ),
+  'Other' => array(
+    'code' => null,
+  ),
 );
+
+$courseDateOb = new CourseDateList();
+$courseDateOb->set_limits(0, 10);
+foreach ($programs as $key => &$value) {
+  $code = $value['code'];
+  $dates = &$value['dates'];
+  if ($code === null) continue;
+
+  $courseDateOb->set_course($code);
+  $ret = $courseDateOb->get_course_dates();
+  $dates = array_column($ret, 'showdate');
+}
+//print_r($programs);
+
+
 
 $sources = array(
   'Google',
@@ -50,7 +67,7 @@ $source_hosts = array(
   'm.yelp.com' => 'Yelp',
 );
 
-//$select_options_programs = array_to_select_options($programs, $form_course_name);
+//$select_options_programs = array_to_select_options(keys($programs), $form_course_name);
 $select_options_programs = <<<'HTML'
 <option value="none">&ndash; Select a program &ndash;</option>
 <option value="EMT">EMT</option>
