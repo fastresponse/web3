@@ -1,7 +1,14 @@
 <?php
 require_once '../twig_loader.php';
-
 require_once '../php/class.course_dates.php';
+require_once '../php/referring_source.php';
+require_once '../php/frlib.php';
+
+$form_course_name = filter_input(
+  INPUT_GET, 'p',
+  FILTER_SANITIZE_STRING,
+  FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_BACKTICK
+);
 
 $programs = array(
   'EMT' => array(
@@ -40,36 +47,13 @@ foreach ($programs as $key => &$value) {
   $ret = $courseDateOb->get_course_dates();
   $dates = array_column($ret, 'showdate');
 }
-//print_r($programs);
 
 
-
-$sources = array(
-  'Google',
-  'Facebook',
-  'Yahoo / Bing',
-  'Yelp',
-  'East Bay Express',
-  'Friend / Relative',
-  'Coworker / Employer',
-  'Flyer / Brochure',
-  'Career Fair',
-  'Other',
-);
-
-$source_hosts = array(
-  'www.google.com' => 'Google',
-  'www.facebook.com' => 'Facebook',
-  'm.facebook.com' => 'Facebook',
-  'www.bing.com' => 'Yahoo / Bing',
-  'search.yahoo.com' => 'Yahoo / Bing',
-  'www.yelp.com' => 'Yelp',
-  'm.yelp.com' => 'Yelp',
-);
-
-//$select_options_programs = array_to_select_options(keys($programs), $form_course_name);
+$select_options_programs =
+  array_to_option_html(array_keys($programs), $form_course_name)
+;
+/*
 $select_options_programs = <<<'HTML'
-<option value="none">&ndash; Select a program &ndash;</option>
 <option value="EMT">EMT</option>
 <option value="Phlebotomy">Phlebotomy</option>
 <option value="Pharmacy Technician">Pharmacy Technician</option>
@@ -77,10 +61,11 @@ $select_options_programs = <<<'HTML'
 <option value="Paramedic">Paramedic</option>
 <option value="Other">Other</option>
 HTML;
+*/
 
-//$select_options_sources = array_to_option_html($sources, get_referring_source());
+$select_options_sources = array_to_option_html($sources, get_referring_source());
+/*
 $select_options_sources = <<<'HTML'
-<option value="none">&ndash; Select one &ndash;</option>
 <option value="Google">Google</option>
 <option value="Facebook">Facebook</option>
 <option value="Yahoo / Bing">Yahoo / Bing</option>
@@ -92,6 +77,7 @@ $select_options_sources = <<<'HTML'
 <option value="Career Fair">Career Fair</option>
 <option value="Other">Other</option>
 HTML;
+*/
 
 $left_col = <<<"HTML"
   <div>
@@ -104,19 +90,14 @@ $left_col = <<<"HTML"
   <div>
     <label class="label">Program</label><br>
     <select class="drop-down">
+      <option value="none">&ndash; Select a program &ndash;</option>
       $select_options_programs
     </select>
   </div>
   <div>
     <label class="label">Course Dates</label><br>
-    <select class="drop-down">
+    <select class="drop-down dates" id="dates-none">
       <option value="none">&ndash; N/A &ndash;</option>
-<!--
-      <option value="Oct 31st 2016">Oct 31st 2016</option>
-      <option value="Nov 24th 2016">Nov 24th 2016</option>
-      <option value="Dec 25th 2016">Dec 25th 2016</option>
-      <option value="Dec 31st 2016">Dec 31st 2016</option>
--->
     </select>
   </div>
   <div>
@@ -148,6 +129,7 @@ $left_col = <<<"HTML"
   <div>
     <label class="label">Where did you hear about us?</label><br>
     <select class="drop-down">
+      <option value="none">&ndash; Select one &ndash;</option>
       $select_options_sources
     </select>
   </div>

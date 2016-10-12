@@ -1,5 +1,38 @@
 <?php
 
+// if $arr is associative array: keys are used as labels
+// if $arr is simple list: labels and values are the same
+function array_to_option_html($arr, $current = '') {
+  $output = '';
+
+  // anonymous function that inherits variables from parent scope
+  // must inherit its own name by reference so it can recurse
+  $make_html = function($key, $val) use (&$make_html, $current) {
+    $output = '';
+    if (is_int($key)) {
+      $key = $val;
+    }
+    if (is_array($val)) {
+      $output .= "<optgroup label='$key'>";
+      foreach ($val as $subkey => $subval) {
+        $output .= $make_html($subkey, $subval);
+      }
+      $output .= "</optgroup>";
+    }
+    else {
+      $selected = ($current == $key) ? "selected='selected'" : "";
+      $output .= "<option $selected value='$key'>$val</option>";
+    }
+    return $output;
+  };
+
+  foreach ($arr as $key => $val) {
+    $output .= $make_html($key, $val);
+  }
+
+  return $output;
+}
+
 function post_set($index) {
   return
     array_key_exists($index, $_POST) &&

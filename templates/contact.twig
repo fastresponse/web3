@@ -3,7 +3,7 @@
 {% set css = ['contact.css']|merge( css|default( [] ) ) %}
 
 {% block main %}
-  <form class="contact-form">
+  <form class="contact-form" action="{{ formaction|default('') }}">
     <div id="left-col">
     {% block left %}
       {% set content = left %}
